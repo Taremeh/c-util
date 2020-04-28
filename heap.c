@@ -4,6 +4,8 @@
  |  Lang:   C (English)
  |
  |  Contents:
+ |      - swap
+ |
  |    MaxHeap with 2 or d nodes / children
  |      - heapify
  |      - heapify_d
@@ -13,6 +15,25 @@
  *-------------------------------------------------------------------*/
  
  
+/*--------------------------------------------------------- swap -----
+ |  Function swap (variables, array variables)
+ |
+ |  Purpose:  Swap two variables. i.e. int a and int b, or A[i] and A[j]
+ |
+ |  Parameters:
+ |      int &a (IN) -- Address of first element
+ |      int &b (IN) -- Address of second element
+ |
+ |  Returns:  n/a
+ *-------------------------------------------------------------------*/
+void swap(int *p_x, int *p_y) {
+    int tmp = *p_x;
+    *p_x = *p_y;
+    *p_y = tmp;
+}
+
+
+
 
 /*---------------------------------------- heapify (buildMaxHeap) -----
  |  Function heapify (buildMaxHeap)
