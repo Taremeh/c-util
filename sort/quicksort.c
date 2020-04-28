@@ -18,6 +18,7 @@
  |  Function lomutoPartition
  |
  |  Purpose: Partition Array into: <= pivot | pivot | > pivot
+ |      A[r] is being selected as pivot.
  |
  |  Parameters:
  |      int A[] (IN) -- Array to be partitioned
