@@ -17,7 +17,7 @@
 /*----------------------------------------------- lomutoPartition -----
  |  Function lomutoPartition
  |
- |  Purpose: Partition Array into: <= pivot | pivot | >= pivot
+ |  Purpose: Partition Array into: <= pivot | pivot | > pivot
  |
  |  Parameters:
  |      int A[] (IN) -- Array to be partitioned
