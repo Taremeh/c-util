@@ -83,9 +83,6 @@ void appendAtTail(struct list* l, int val) {
         l->head = new_node;
         l->tail = new_node;
 
-        //printf("\nl->head->next: %p\n", &l->head->next);
-        //printf("\nnew_node->next: %p\n", &new_node->next);
-
     } else {
         l->tail->next = new_node;
         l->tail = new_node;
@@ -201,7 +198,7 @@ void deleteNode(struct list *listA, int pos) {
 
 
 
-/* Try it out (returns [ 0 1 2 3 4 5 ] */
+/* Try it out: returns [ 0 1 2 3 4 5 ] */
 int main() {
 
     struct list* l = initLinkedList();
