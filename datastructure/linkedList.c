@@ -7,7 +7,7 @@
  |      - node
  |      - list
  |
- |    methods
+ |    functions
  |      - initNode
  |      - initLinkedList
  |      - appendAtTail
