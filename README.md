@@ -4,7 +4,7 @@ Utilities (Algorithms and Datastructures) in C
 ### Common
 | Algorithm     | Description           |
 | ------------- | ------------- |
-| [Swap](https://github.com/Taremeh/c-util/blob/master/commons.c#L14)      | Swap variables via &address |
+| [Swap](https://github.com/Taremeh/c-util/blob/master/commons.c#L14)      | Swap variables via `&address` |
 | [Print Array](https://github.com/Taremeh/c-util/blob/master/commons.c#L32)      | Iterate through array, printing its values  |
 
 ---
