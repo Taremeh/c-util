@@ -120,4 +120,6 @@ int main() {
     push(s,4);
     push(s,5);
     printStack(s);
+ 
+    return 0;
 }
