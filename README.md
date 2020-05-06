@@ -21,3 +21,5 @@ Utilities (Algorithms and Datastructures) in C
 | ------------- | ------------- | ----- |
 | [Heap](https://github.com/Taremeh/c-util/blob/master/datastructure/heap.c)      | MaxHeap (*with 2 or d nodes*) | Insert/Delete: `O(log n)`, Heapify: `O(n log n)` |
 | [LinkedList](https://github.com/Taremeh/c-util/blob/master/datastructure/linkedList.c)      |  |  |
+| [Stack](https://github.com/Taremeh/c-util/blob/master/datastructure/stack.c)      |  |  |
+| [Queue](https://github.com/Taremeh/c-util/blob/master/datastructure/circular_queue.c)      | LIFO circular queue |  |
