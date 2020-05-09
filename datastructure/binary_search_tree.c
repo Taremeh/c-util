@@ -251,8 +251,7 @@ void deleteNode(struct TreeNode** root, int val) {
     } else {
         /* left subtree exists */
         struct TreeNode* maximumSubNode = maximum(deleteNode->l);
-        deleteNode->val = maximumSubNode->val;
-        //maximumSubNode = NULL; /* TODO: minimumSubNodes parentNode is still pointing to its address (memory leak?) */
+        deleteNode->val = maximumSubNode->val; // replace deleteNode with maximum of subtree
 
         // Get maximumSubNode parentNode and remove link to maximumSubNode
         struct TreeNode* parentNode = getParentNode(*root,maximumSubNode);
