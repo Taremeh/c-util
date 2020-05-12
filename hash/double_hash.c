@@ -3,8 +3,9 @@
  |  Author: Tarek Alakmeh
  |  Date:   Mai 2020
  |  Lang:   C (English)
+ |  Note:   Hash table for storing positive integers
  |
- |    Hash using double hash method for conflict resolution
+ |    Hash using double hash method for collision resolution
  |      - initHash
  |      - h
  |      - insert
