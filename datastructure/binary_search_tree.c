@@ -375,10 +375,20 @@ int main() {
 
 
 
-/*
- * Extra Functionality for Binary Search Trees
- */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *           Extra Functionality for Binary Search Trees             *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
+/*-------------------------------------------------- lowCmnAnc ------
+ |  Parameters:
+ |      struct TreeNode* root (IN) -- Root node
+ |      struct TreeNode* n1 (IN) -- Child node 1
+ |      struct TreeNode* n2 (IN) -- Child node 2
+ |
+ |  Returns:
+ |      struct TreeNode* (OUT) -- Lowest common ancestor node
+ |          (assuming every node is ancestor of itself)
+ *-------------------------------------------------------------------*/
 struct TreeNode* lowCmnAnc(struct TreeNode* root, struct TreeNode* n1, struct TreeNode* n2) {
     if(root == NULL) { return NULL; }
     if(n1->val < root->val && n2->val < root->val) {
