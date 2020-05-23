@@ -40,3 +40,21 @@ void printArray(int A[], int n) {
         i++;
     }
 }
+
+
+/*----------------------------------------------- duplicateArray -----
+ |  Parameters:
+ |      int A[] (IN) -- Input Array A
+ |
+ |  Returns:  int* pointer to duplicate array. Can be called like:
+ |      int *B = duplicateArray(A, n);
+ *-------------------------------------------------------------------*/
+int* duplicateArray(int A[], int n) {
+    int *B = malloc(n* sizeof(int));
+
+    for(int i = 0; i < n; i++) {
+        B[i] = A[i];
+    }
+
+    return B;
+}
