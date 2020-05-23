@@ -6,6 +6,7 @@ Utilities (Algorithms and Datastructures) in C
 | ------------- | ------------- |
 | [Swap](https://github.com/Taremeh/c-util/blob/master/commons.c#L14)      | Swap variables via `&address` |
 | [Print Array](https://github.com/Taremeh/c-util/blob/master/commons.c#L32)      | Iterate through array, printing its values  |
+| [Duplicate Array](https://github.com/Taremeh/c-util/blob/master/commons.c#L46)      | Returns pointer to duplicated array  |
 
 ---
 
