@@ -16,6 +16,10 @@
  |      - printTree (& printTreeRec)
  |      - main (example)
  |
+ |    extra
+ |      - lowCmnAnc (lowest common ancestor)
+ |      - main (example)
+ |
  *-------------------------------------------------------------------*/
  
 #include <stdio.h>
@@ -343,7 +347,7 @@ void printTree(struct TreeNode* n) {
 }
 
 
-/* Try it out: returns */
+/* Try it out */
 int main() {
     struct TreeNode* root = NULL;
     insert(&root, 10);
@@ -364,6 +368,42 @@ int main() {
     printTree(root);
     printf("\nMaximum Value: %d", maximum(root)->val);
     printf("\nDistance to root of node 6: %d",distanceToRoot(root,6));
+
+    return 0;
+}
+
+
+
+
+/*
+ * Extra Functionality for Binary Search Trees
+ */
+
+struct TreeNode* lowCmnAnc(struct TreeNode* root, struct TreeNode* n1, struct TreeNode* n2) {
+    if(root == NULL) { return NULL; }
+    if(n1->val < root->val && n2->val < root->val) {
+        return lowCmnAnc(root->l, n1, n2);
+    }
+    if(n1->val > root->val && n2->val > root->val) {
+        return lowCmnAnc(root->r, n1, n2);
+    }
+
+    return root;
+}
+
+
+/* Try it out: returns
+ * Lowest common ancestor of 10 and 18 is: 16
+ */
+int main() {
+    struct TreeNode* root = NULL;
+    insert(&root, 28); insert(&root, 30); insert(&root, 16);
+    insert(&root, 10); insert(&root, 21); insert(&root, 18);
+    insert(&root, 24);
+
+
+    int c1 = 10; int c2 = 18;
+    printf("\nLowest common ancestor of %d and %d is: %d", c1, c2, lowCmnAnc(root, search(root, c1),  search(root, c2))->val);
 
     return 0;
 }
