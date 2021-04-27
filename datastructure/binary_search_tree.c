@@ -240,8 +240,7 @@ void deleteNode(struct TreeNode** root, int val) {
         } else {
             /* right subtree exists */
             struct TreeNode* minimumSubNode = minimum(deleteNode->r);
-            deleteNode->val = minimumSubNode->val; // replace deleteNode with minimum of subtree
-
+            
             // Get minimumSubNode parentNode and remove link to minimumSubNode
             struct TreeNode* parentNode = getParentNode(*root,minimumSubNode);
             if(parentNode->l == minimumSubNode) {
@@ -249,13 +248,13 @@ void deleteNode(struct TreeNode** root, int val) {
             } else if (parentNode->r == minimumSubNode) {
                 parentNode->r = NULL;
             }
-
+         
+            deleteNode->val = minimumSubNode->val; // replace deleteNode with minimum of subtree
             free(minimumSubNode);
         }
     } else {
         /* left subtree exists */
         struct TreeNode* maximumSubNode = maximum(deleteNode->l);
-        deleteNode->val = maximumSubNode->val; // replace deleteNode with maximum of subtree
 
         // Get maximumSubNode parentNode and remove link to maximumSubNode
         struct TreeNode* parentNode = getParentNode(*root,maximumSubNode);
@@ -265,6 +264,7 @@ void deleteNode(struct TreeNode** root, int val) {
             parentNode->r = NULL;
         }
 
+        deleteNode->val = maximumSubNode->val; // replace deleteNode with maximum of subtree
         free(maximumSubNode);
     }
 
