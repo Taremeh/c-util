@@ -244,9 +244,9 @@ void deleteNode(struct TreeNode** root, int val) {
             // Get minimumSubNode parentNode and remove link to minimumSubNode
             struct TreeNode* parentNode = getParentNode(*root,minimumSubNode);
             if(parentNode->l == minimumSubNode) {
-                parentNode->l = NULL;
+                parentNode->l = minimumSubNode->r;
             } else if (parentNode->r == minimumSubNode) {
-                parentNode->r = NULL;
+                parentNode->r = minimumSubNode->r;
             }
          
             deleteNode->val = minimumSubNode->val; // replace deleteNode with minimum of subtree
@@ -259,9 +259,9 @@ void deleteNode(struct TreeNode** root, int val) {
         // Get maximumSubNode parentNode and remove link to maximumSubNode
         struct TreeNode* parentNode = getParentNode(*root,maximumSubNode);
         if(parentNode->l == maximumSubNode) {
-            parentNode->l = NULL;
+            parentNode->l = maximumSubNode->l;
         } else if (parentNode->r == maximumSubNode) {
-            parentNode->r = NULL;
+            parentNode->r = maximumSubNode->l;
         }
 
         deleteNode->val = maximumSubNode->val; // replace deleteNode with maximum of subtree
